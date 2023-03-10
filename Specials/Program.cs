@@ -37,6 +37,15 @@ namespace Specials
             Console.WriteLine(xf);
             Console.WriteLine(xd);
 
+            int auxI = int.MaxValue;
+            Console.WriteLine(( int) ( auxI + 1));
+
+            float auxF = float.MaxValue;
+            Console.WriteLine(( float) ( auxF + 1));
+
+            double auxD = double.MaxValue;
+            Console.WriteLine(( double) ( auxD + 1));
+
         }
     }
 }
