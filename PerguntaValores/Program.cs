@@ -12,9 +12,9 @@ namespace PerguntaValores
             string r=Console.ReadLine();
             //conversion of strings to int
             int a2 = int.Parse( a );
-            int r2 = int.Parse( r );
+            double r2 = int.Parse( r );
             //Volume
-            double V=Math.PI * (r2 * r2) * a2;
+            double V=Math.PI * (Math.Pow(r2,2)) * a2;
             Console.WriteLine("Volume: "+V);
             //surface area
             double S =(2*Math.PI)*r2*(r2+a2);
