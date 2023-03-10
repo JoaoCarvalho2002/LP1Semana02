@@ -45,7 +45,10 @@ namespace Specials
 
             double auxD = double.MaxValue;
             Console.WriteLine(( double) ( auxD + 1));
-
+            
+            float floataux1,floataux2;
+            floataux1=floataux2=10000.0f;
+            Console.WriteLine(floataux1==floataux2+0.0001f);
         }
     }
 }
