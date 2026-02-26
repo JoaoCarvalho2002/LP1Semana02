@@ -14,6 +14,20 @@ namespace TempConvert
             Console.WriteLine("C or F?");
             unit=Console.ReadLine();
             Console.WriteLine(temp+unit);
+            double tempdou = double.Parse(temp);
+            switch (unit)
+            {
+                case"c":
+
+                    double f = tempdou * 1.8 + 32;
+                    Console.WriteLine(f);
+                    break;
+                case "f":
+
+                    double c = (tempdou-32) /1.8; 
+                    Console.WriteLine(c);
+                    break;
+            }
         }
     }
 }
