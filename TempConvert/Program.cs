@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+
 
 namespace TempConvert
 {
@@ -6,27 +8,34 @@ namespace TempConvert
     {
         private static void Main(string[] args)
         {
+            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
             string temp="";
             string unit="";
-            //Console.WriteLine("Hello LP!");
-            Console.WriteLine("Temperature?");
+            Console.Write("Temperature: ");
             temp=Console.ReadLine();
-            Console.WriteLine("C or F?");
+
+            Console.Write("Unit (C/F): ");
             unit=Console.ReadLine();
-            Console.WriteLine(temp+unit);
+
+            //Convertion from string to double
             double tempdou = double.Parse(temp);
             switch (unit)
             {
-                case"c":
+                case"C":
 
                     double f = tempdou * 1.8 + 32;
-                    Console.WriteLine(f);
+                    Console.WriteLine(tempdou+"C = "+$"{f:F2} F");
                     break;
-                case "f":
+
+                case "F":
 
                     double c = (tempdou-32) /1.8; 
-                    Console.WriteLine(c);
+                    Console.WriteLine(tempdou+"F = "+$"{c:F2} C");
                     break;
+                // incase the input is not desired
+                default:
+                    Console.WriteLine("Invalid unit"); 
+                    break;   
             }
         }
     }
