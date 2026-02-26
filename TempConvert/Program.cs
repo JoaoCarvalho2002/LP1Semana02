@@ -21,16 +21,18 @@ namespace TempConvert
             double tempdou = double.Parse(temp);
             switch (unit)
             {
-                case"C":
+                case "C":
 
                     double f = tempdou * 1.8 + 32;
-                    Console.WriteLine(tempdou+"C = "+$"{f:F2} F");
+                    Console.WriteLine(tempdou+" C = "+$"{f:F2} F");
+                    Console.WriteLine("Absolute value: "+$"{Math.Abs(f):F2}");
                     break;
 
                 case "F":
 
                     double c = (tempdou-32) /1.8; 
-                    Console.WriteLine(tempdou+"F = "+$"{c:F2} C");
+                    Console.WriteLine(tempdou+" F = "+$"{c:F2} C");
+                    Console.WriteLine("Absolute value: "+$"{Math.Abs(c):F2}");
                     break;
                 // incase the input is not desired
                 default:
